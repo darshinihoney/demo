@@ -9,9 +9,16 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"*",
     credentials: true
 }));
+
+app.options('*', cors(
+    {
+      origin: '*',
+      credentials:true
+    }
+  ));
 
 app.use((req,res,next) => {
     console.log(" Request received at " + (new Date()));
