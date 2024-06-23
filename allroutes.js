@@ -1,5 +1,5 @@
 const express = require("express");
-const {usersModel} = require("../backend/schemas");
+const {usersModel} = require("./schemas");
 let allroutes = express.Router();
 const multer = require("multer");
 const upload = multer();
