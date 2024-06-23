@@ -47,5 +47,9 @@ app.use('/',allroutes);
 // schema
 // model
 // from middleware, use model to get data from DB
+const port = process.env.PORT || 3000; // Use the port provided by Vercel
+app.listen(port, () => {
+    console.log(`Backend server listening at port ${port}`);
+});
 
-app.listen(3001,()=>{ console.log("Backend server listening at port 3001")});
+// app.listen(3001,()=>{ console.log("Backend server listening at port 3001")});
